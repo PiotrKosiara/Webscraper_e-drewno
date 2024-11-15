@@ -9,7 +9,7 @@ all_data = []
 
 #Przechodzenie przez konkretne regiony (na stronie wyszczególnione są 4)
 #Można do finalnej tabeli dodać kolumne Region i wpisywać tam odpowiednią nazwę
-for region in range(1, 2):
+for region in range(1, 5):
     page = 1
     while True:
       #warunek na blokowanie wczytaniu ostatnich stron w danym regionie
@@ -52,17 +52,17 @@ for region in range(1, 2):
 
           if len(cols) >= 11:
               data = {
-                  #"Lp": cols[0].text.strip(),
-                  #"RDLP": cols[1].text.strip(),
-                  #"Nadleśnictwo": cols[2].text.strip(),
-                  #"Nr aukcji": cols[3].text.strip(),
-                  #"Gr. handlowo-gatunkowa": cols[4].text.strip(),
-                  #"Zakończenie licytacji": cols[5].text.strip(),
-                  #"Ilość": cols[6].text.strip(),
-                  #"Ilość ofert złożonych/wygrywających": cols[7].text.strip(),
-                  #"Cena otwarcia netto": cols[8].text.strip(),
-                  #"Teraz wygrywa": cols[9].text.strip(),
-                  #"Do końca pozostało": cols[10].text.strip(),
+                  "Lp": cols[0].text.strip(),
+                  "RDLP": cols[1].text.strip(),
+                  "Nadleśnictwo": cols[2].text.strip(),
+                  "Nr aukcji": cols[3].text.strip(),
+                  "Gr. handlowo-gatunkowa": cols[4].text.strip(),
+                  "Zakończenie licytacji": cols[5].text.strip(),
+                  "Ilość": cols[6].text.strip(),
+                  "Ilość ofert złożonych/wygrywających": cols[7].text.strip(),
+                  "Cena otwarcia netto": cols[8].text.strip(),
+                  "Teraz wygrywa": cols[9].text.strip(),
+                  "Do końca pozostało": cols[10].text.strip(),
                   "Opis aukcji": cols_2[0].text.strip(),
                   "Termin na podpisanie umowy": table_2.find("td",class_ = 'aukcja_legend_agreementdeadline').text.strip(),
                   "Termin odbioru drewna": cols_2[1].text.strip(),
